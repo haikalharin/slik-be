@@ -21,7 +21,7 @@ exports.MasterModule = MasterModule = __decorate([
             config_1.ConfigModule.forRoot({
                 isGlobal: true,
             }),
-            sequelize_1.SequelizeModule.forFeature([master_city_1.MasterCity])
+            sequelize_1.SequelizeModule.forFeature([master_city_1.MasterCity]),
         ],
         providers: [master_service_1.MasterService],
         exports: [master_service_1.MasterService, sequelize_1.SequelizeModule.forFeature([master_city_1.MasterCity])],

@@ -8,7 +8,7 @@ const envFile = `.env.${process.env.NODE_ENV || 'development'}`;
 dotenv.config({ path: path.resolve(__dirname, envFile) });
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
-    await app.listen(process.env.PORT);
+    await app.listen(3000);
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

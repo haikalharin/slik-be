@@ -27,7 +27,7 @@ exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
             config_1.ConfigModule.forRoot({
-                envFilePath: `.env.${process.env.NODE_ENV}` || '.env',
+                envFilePath: `.env.${process.env.NODE_ENV}` || '.env.development',
                 isGlobal: true,
             }),
             sequelize_1.SequelizeModule.forRoot({
@@ -46,7 +46,7 @@ exports.AppModule = AppModule = __decorate([
             }),
             auth_module_1.AuthModule,
             users_module_1.UserModule,
-            master_module_1.MasterModule
+            master_module_1.MasterModule,
         ],
         controllers: [app_controller_1.AppController, auth_controller_1.AuthController, master_controller_1.MasterController],
         providers: [app_service_1.AppService, auth_service_1.AuthService, master_service_1.MasterService],

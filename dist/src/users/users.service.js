@@ -43,7 +43,6 @@ let UsersService = class UsersService {
         const hash = crypto.createHash('md5').update(data).digest('hex');
         return hash === hashed;
     }
-    ;
     async createUser(data) {
         return this.userModel.create(data);
     }

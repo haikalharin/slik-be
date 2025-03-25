@@ -1,4 +1,4 @@
-import { MasterCity } from "./entities/master.city";
+import { MasterCity } from './entities/master.city';
 export declare class MasterService {
     private readonly masterCity;
     private readonly logger;

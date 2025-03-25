@@ -1,18 +1,23 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const process = require('process');
-const {Sequelize} = require("sequelize");
+import process from "process";
+
+import path from "path";
+
+import fs from "fs";
+
+import { Sequelize } from "sequelize";
+import * as dotenv from "dotenv";
+import { User } from "../auth/entities/user.entity";
+
 const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
 // const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 dotenv.config(); // Load environment variables
 
 const config = {
-  use_env_variable: process.env.DB_URL, // Use DB_URL from .env.development file
+  use_env_variable: process.env.DB_URL, // Use DB_URL from .env.development.development file
   database: process.env.DB_NAME,
   username: process.env.DB_USER,
   password: process.env.DB_PASS,

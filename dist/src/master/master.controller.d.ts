@@ -1,4 +1,4 @@
-import { MasterService } from "./master.service";
+import { MasterService } from './master.service';
 export declare class MasterController {
     private masterService;
     constructor(masterService: MasterService);
